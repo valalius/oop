@@ -17,10 +17,7 @@ Array::~Array()
 void Array::showElements()
 {
     for (int i = 0; i < currentIndex_; i++)
-        //        if (i != currentIndex_)
-        std::cout << arrPtr_[i] << " ";
-    //        else
-    //            std::cout << arrPtr_[i];
+        std::cout << arrPtr_[i] << " ":
     std::cout << std::endl;
 }
 
@@ -57,11 +54,6 @@ void Array::setArray(int* pArr, int size)
 {
     if (size + currentIndex_ > initialSize_)
         expandArray(size);
-    //for (int i = 0; i <= currentIndex_; i++)
-//    {
-//        std::cout << "i = " << i << std::endl << "initialSize_ - i = " << initialSize_ - i << std::endl << "currentIndex_ - i = " << currentIndex_ - i << std::endl;
-        //arrPtr_[initialSize_ - 1 - i] = arrPtr_[currentIndex_ - 1 - i];
-//    }
     for (int i = currentIndex_; i < initialSize_; i++)
         arrPtr_[i] = pArr[i - currentIndex_];
     currentIndex_ += size;
