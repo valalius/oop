@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+void fill (int* arr, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cin >> arr[i];
+    }
+}
+void find (int* arr, int size)
+{
+    cout << "Solution:" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i]%3 == 0 || arr [i]%5 == 0)
+        {
+            cout << i << " - " << arr [i] << endl;
+        }
+    }
+}
+
+int main ()
+{
+    int size;
+    
+    cout << "Enter array size:" << endl;
+    
+    cin >> size;
+    
+    if (size <= 0 || size > 10)
+    {
+        cout << "Wrong array size" << endl;
+        return 0;
+    }
+    
+    int* arr = new int[size];
+    
+    
+    fill(arr, size);
+    find(arr, size);
+    
+    delete[] arr;
+    
+    return 0;
+}
